@@ -125,7 +125,7 @@ En el ejercicio PE de esta semana, se ha trabajado con la API Síncrona de Node 
 
 ## Conclusiones
 
-En esta práctica se ha profundizado en el desarrollo de código según los principios SOLID, así como familiarizarse con el uso de módulos `chalk` y `yargs`, así como de la API Síncrona de Node.js para el manejo del sistema de archivos. También del cubrimiento del código mediante Coveralls y la gestión de calidad mediante SonarCloud.
+En esta práctica se ha profundizado en el desarrollo de código según los principios SOLID, así como familiarizarse con el uso de módulos `chalk` y `yargs`, así como de la API Síncrona de Node.js para el manejo del sistema de archivos. También del cubrimiento del código mediante Coveralls, la documentación del mismo mediante Typedoc y la gestión de calidad mediante SonarCloud.
 
 ## Bibliografía
 
