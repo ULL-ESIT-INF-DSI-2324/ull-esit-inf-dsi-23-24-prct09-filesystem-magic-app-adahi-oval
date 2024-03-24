@@ -1,4 +1,5 @@
 import { CardColor, CardType, CardRarity, Card } from "./Card.js";
+import * as chalk from 'chalk';
 
 /**
  * Interfaz para representar un objeto de tipo CardStats, que se compone de un valor numerico para la fuerza y otro para la resistencia
@@ -12,17 +13,110 @@ export interface CardStats {
  * Clase que representa una carta de tipo Tierra
  */
 export class Tierra extends Card {
-  constructor(protected ID: number, protected Name: string, protected Cost: number, protected Color: CardColor, protected Type: CardType, protected Rarity: CardRarity, protected Text: string, protected Price: number) {
+  constructor(protected ID:number, protected Name: string, protected Cost: number, protected Color: CardColor, protected Type: CardType, protected Rarity: CardRarity, protected Text: string, protected Price: number) {
     super(ID, Name, Cost, Color, Type, Rarity, Text, Price);
   }
+
+  print(): void {
+    console.log(chalk.white(chalk.bold.underline('ID:') + ` ${this.id}`));
+    console.log(chalk.white(chalk.bold.underline('Name:') + ` ${this.name}`));
+    console.log(chalk.white(chalk.bold.underline('Cost:') + ` ${this.cost}`));
+
+    switch (this.color) {
+      case CardColor.Azul:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.blue(` ${this.color}`)));
+        break;
+
+      case CardColor.Blanco:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.white(` ${this.color}`)));
+        break;
+
+      case CardColor.Negro:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.blackBright(` ${this.color}`)));
+        break;
+
+      case CardColor.Rojo:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.red(` ${this.color}`)));
+        break;
+    
+      case CardColor.Verde:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.green(` ${this.color}`)));
+        break;
+    
+      case CardColor.Incoloro:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.whiteBright(` ${this.color}`)));
+        break;
+
+      case CardColor.Multicolor:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.bgYellowBright(` ${this.color}`)));
+        break;
+
+      default:
+        break;
+    }
+
+    console.log(chalk.white(chalk.bold.underline('Type:') + ` ${this.type}`));
+    console.log(chalk.white(chalk.bold.underline('Rarity:') + ` ${this.rarity}`));
+    console.log(chalk.white(chalk.bold.underline('Text:') + ` ${this.text}`));
+    console.log(chalk.white(chalk.bold.underline('Price:') + ` ${this.price}`));
+
+    console.log(chalk.grey.bold('-'.repeat(50)));
+  }
+
 }
 
 /**
  * Clase que representa una carta de tipo Encantamiento
  */
 export class Encantamiento extends Card {
-  constructor(protected ID: number, protected Name: string, protected Cost: number, protected Color: CardColor, protected Type: CardType, protected Rarity: CardRarity, protected Text: string, protected Price: number) {
+  constructor(protected ID:number, protected Name: string, protected Cost: number, protected Color: CardColor, protected Type: CardType, protected Rarity: CardRarity, protected Text: string, protected Price: number) {
     super(ID, Name, Cost, Color, Type, Rarity, Text, Price);
+  }
+
+  print(): void {
+    console.log(chalk.white(chalk.bold.underline('ID:') + ` ${this.id}`));
+    console.log(chalk.white(chalk.bold.underline('Name:') + ` ${this.name}`));
+    console.log(chalk.white(chalk.bold.underline('Cost:') + ` ${this.cost}`));
+
+    switch (this.color) {
+      case CardColor.Azul:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.blue(` ${this.color}`)));
+        break;
+
+      case CardColor.Blanco:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.white(` ${this.color}`)));
+        break;
+
+      case CardColor.Negro:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.blackBright(` ${this.color}`)));
+        break;
+
+      case CardColor.Rojo:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.red(` ${this.color}`)));
+        break;
+    
+      case CardColor.Verde:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.green(` ${this.color}`)));
+        break;
+    
+      case CardColor.Incoloro:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.whiteBright(` ${this.color}`)));
+        break;
+
+      case CardColor.Multicolor:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.bgYellowBright(` ${this.color}`)));
+        break;
+
+      default:
+        break;
+    }
+
+    console.log(chalk.white(chalk.bold.underline('Type:') + ` ${this.type}`));
+    console.log(chalk.white(chalk.bold.underline('Rarity:') + ` ${this.rarity}`));
+    console.log(chalk.white(chalk.bold.underline('Text:') + ` ${this.text}`));
+    console.log(chalk.white(chalk.bold.underline('Price:') + ` ${this.price}`));
+
+    console.log(chalk.grey.bold('-'.repeat(50)));
   }
 }
 
@@ -30,8 +124,54 @@ export class Encantamiento extends Card {
  * Clase que representa una carta de tipo Conjuro
  */
 export class Conjuro extends Card {
-  constructor(protected ID: number, protected Name: string, protected Cost: number, protected Color: CardColor, protected Type: CardType, protected Rarity: CardRarity, protected Text: string, protected Price: number) {
+  constructor(protected ID:number, protected Name: string, protected Cost: number, protected Color: CardColor, protected Type: CardType, protected Rarity: CardRarity, protected Text: string, protected Price: number) {
     super(ID, Name, Cost, Color, Type, Rarity, Text, Price);
+  }
+
+  print(): void {
+    console.log(chalk.white(chalk.bold.underline('ID:') + ` ${this.id}`));
+    console.log(chalk.white(chalk.bold.underline('Name:') + ` ${this.name}`));
+    console.log(chalk.white(chalk.bold.underline('Cost:') + ` ${this.cost}`));
+
+    switch (this.color) {
+      case CardColor.Azul:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.blue(` ${this.color}`)));
+        break;
+
+      case CardColor.Blanco:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.white(` ${this.color}`)));
+        break;
+
+      case CardColor.Negro:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.blackBright(` ${this.color}`)));
+        break;
+
+      case CardColor.Rojo:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.red(` ${this.color}`)));
+        break;
+    
+      case CardColor.Verde:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.green(` ${this.color}`)));
+        break;
+    
+      case CardColor.Incoloro:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.whiteBright(` ${this.color}`)));
+        break;
+
+      case CardColor.Multicolor:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.bgYellowBright(` ${this.color}`)));
+        break;
+
+      default:
+        break;
+    }
+
+    console.log(chalk.white(chalk.bold.underline('Type:') + ` ${this.type}`));
+    console.log(chalk.white(chalk.bold.underline('Rarity:') + ` ${this.rarity}`));
+    console.log(chalk.white(chalk.bold.underline('Text:') + ` ${this.text}`));
+    console.log(chalk.white(chalk.bold.underline('Price:') + ` ${this.price}`));
+
+    console.log(chalk.grey.bold('-'.repeat(50)));
   }
 }
 
@@ -39,8 +179,54 @@ export class Conjuro extends Card {
  * Clase que representa una carta de tipo Instantaneo
  */
 export class Instantaneo extends Card {
-  constructor(protected ID: number, protected Name: string, protected Cost: number, protected Color: CardColor, protected Type: CardType, protected Rarity: CardRarity, protected Text: string, protected Price: number) {
+  constructor(protected ID:number, protected Name: string, protected Cost: number, protected Color: CardColor, protected Type: CardType, protected Rarity: CardRarity, protected Text: string, protected Price: number) {
     super(ID, Name, Cost, Color, Type, Rarity, Text, Price);
+  }
+
+  print(): void {
+    console.log(chalk.white(chalk.bold.underline('ID:') + ` ${this.id}`));
+    console.log(chalk.white(chalk.bold.underline('Name:') + ` ${this.name}`));
+    console.log(chalk.white(chalk.bold.underline('Cost:') + ` ${this.cost}`));
+
+    switch (this.color) {
+      case CardColor.Azul:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.blue(` ${this.color}`)));
+        break;
+
+      case CardColor.Blanco:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.white(` ${this.color}`)));
+        break;
+
+      case CardColor.Negro:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.blackBright(` ${this.color}`)));
+        break;
+
+      case CardColor.Rojo:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.red(` ${this.color}`)));
+        break;
+    
+      case CardColor.Verde:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.green(` ${this.color}`)));
+        break;
+    
+      case CardColor.Incoloro:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.whiteBright(` ${this.color}`)));
+        break;
+
+      case CardColor.Multicolor:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.bgYellowBright(` ${this.color}`)));
+        break;
+
+      default:
+        break;
+    }
+
+    console.log(chalk.white(chalk.bold.underline('Type:') + ` ${this.type}`));
+    console.log(chalk.white(chalk.bold.underline('Rarity:') + ` ${this.rarity}`));
+    console.log(chalk.white(chalk.bold.underline('Text:') + ` ${this.text}`));
+    console.log(chalk.white(chalk.bold.underline('Price:') + ` ${this.price}`));
+
+    console.log(chalk.grey.bold('-'.repeat(50)));
   }
 }
 
@@ -48,8 +234,54 @@ export class Instantaneo extends Card {
  * Clase que representa una carta de tipo Artefacto
  */
 export class Artefacto extends Card {
-  constructor(protected ID: number, protected Name: string, protected Cost: number, protected Color: CardColor, protected Type: CardType, protected Rarity: CardRarity, protected Text: string, protected Price: number) {
+  constructor(protected ID:number, protected Name: string, protected Cost: number, protected Color: CardColor, protected Type: CardType, protected Rarity: CardRarity, protected Text: string, protected Price: number) {
     super(ID, Name, Cost, Color, Type, Rarity, Text, Price);
+  }
+
+  print(): void {
+    console.log(chalk.white(chalk.bold.underline('ID:') + ` ${this.id}`));
+    console.log(chalk.white(chalk.bold.underline('Name:') + ` ${this.name}`));
+    console.log(chalk.white(chalk.bold.underline('Cost:') + ` ${this.cost}`));
+
+    switch (this.color) {
+      case CardColor.Azul:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.blue(` ${this.color}`)));
+        break;
+
+      case CardColor.Blanco:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.white(` ${this.color}`)));
+        break;
+
+      case CardColor.Negro:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.blackBright(` ${this.color}`)));
+        break;
+
+      case CardColor.Rojo:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.red(` ${this.color}`)));
+        break;
+    
+      case CardColor.Verde:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.green(` ${this.color}`)));
+        break;
+    
+      case CardColor.Incoloro:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.whiteBright(` ${this.color}`)));
+        break;
+
+      case CardColor.Multicolor:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.bgYellowBright(` ${this.color}`)));
+        break;
+
+      default:
+        break;
+    }
+
+    console.log(chalk.white(chalk.bold.underline('Type:') + ` ${this.type}`));
+    console.log(chalk.white(chalk.bold.underline('Rarity:') + ` ${this.rarity}`));
+    console.log(chalk.white(chalk.bold.underline('Text:') + ` ${this.text}`));
+    console.log(chalk.white(chalk.bold.underline('Price:') + ` ${this.price}`));
+
+    console.log(chalk.grey.bold('-'.repeat(50)));
   }
 }
 
@@ -58,7 +290,7 @@ export class Artefacto extends Card {
  */
 export class Criatura extends Card {
   
-  constructor(protected ID: number, protected Name: string, protected Cost: number, protected Color: CardColor, protected Type: CardType, protected Rarity: CardRarity, protected Text: string, protected Price: number, protected Stats: CardStats) {
+  constructor(protected ID:number, protected Name: string, protected Cost: number, protected Color: CardColor, protected Type: CardType, protected Rarity: CardRarity, protected Text: string, protected Price: number, protected Stats: CardStats) {
     super(ID, Name, Cost, Color, Type, Rarity, Text, Price);
   }
 
@@ -68,6 +300,54 @@ export class Criatura extends Card {
   get stats() {
     return this.Stats;
   }
+
+  print(): void {
+    console.log(chalk.white(chalk.bold.underline('ID:') + ` ${this.id}`));
+    console.log(chalk.white(chalk.bold.underline('Name:') + ` ${this.name}`));
+    console.log(chalk.white(chalk.bold.underline('Cost:') + ` ${this.cost}`));
+
+    switch (this.color) {
+      case CardColor.Azul:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.blue(` ${this.color}`)));
+        break;
+
+      case CardColor.Blanco:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.white(` ${this.color}`)));
+        break;
+
+      case CardColor.Negro:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.blackBright(` ${this.color}`)));
+        break;
+
+      case CardColor.Rojo:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.red(` ${this.color}`)));
+        break;
+    
+      case CardColor.Verde:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.green(` ${this.color}`)));
+        break;
+    
+      case CardColor.Incoloro:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.whiteBright(` ${this.color}`)));
+        break;
+
+      case CardColor.Multicolor:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.bgYellowBright(` ${this.color}`)));
+        break;
+
+      default:
+        break;
+    }
+
+    console.log(chalk.white(chalk.bold.underline('Type:') + ` ${this.type}`));
+    console.log(chalk.white(chalk.bold.underline('Rarity:') + ` ${this.rarity}`));
+    console.log(chalk.white(chalk.bold.underline('Text:') + ` ${this.text}`));
+    console.log(chalk.white(chalk.bold.underline('Price:') + ` ${this.price}`));
+    console.log(chalk.white(chalk.bold.underline('Strength: ') + `${this.stats.fuerza}`));
+    console.log(chalk.white(chalk.bold.underline('Resistence: ') + `${this.stats.resistencia}`));
+
+    console.log(chalk.grey.bold('-'.repeat(50)));
+  }
   
 }
 
@@ -75,7 +355,7 @@ export class Criatura extends Card {
  * Clase que representa una carta de tipo Planeswalker, atributo adicional Loyalty para las masrcas de lealtad
  */
 export class Planeswalker extends Card {
-  constructor(protected ID: number, protected Name: string, protected Cost: number, protected Color: CardColor, protected Type: CardType, protected Rarity: CardRarity, protected Text: string, protected Price: number, protected Loyalty: number) {
+  constructor(protected ID:number, protected Name: string, protected Cost: number, protected Color: CardColor, protected Type: CardType, protected Rarity: CardRarity, protected Text: string, protected Price: number, protected Loyalty: number) {
     super(ID, Name, Cost, Color, Type, Rarity, Text, Price);
   }
 
@@ -84,6 +364,53 @@ export class Planeswalker extends Card {
    */
   get loyalty() {
     return this.Loyalty;
+  }
+
+  print(): void {
+    console.log(chalk.white(chalk.bold.underline('ID:') + ` ${this.id}`));
+    console.log(chalk.white(chalk.bold.underline('Name:') + ` ${this.name}`));
+    console.log(chalk.white(chalk.bold.underline('Cost:') + ` ${this.cost}`));
+
+    switch (this.color) {
+      case CardColor.Azul:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.blue(` ${this.color}`)));
+        break;
+
+      case CardColor.Blanco:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.white(` ${this.color}`)));
+        break;
+
+      case CardColor.Negro:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.blackBright(` ${this.color}`)));
+        break;
+
+      case CardColor.Rojo:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.red(` ${this.color}`)));
+        break;
+    
+      case CardColor.Verde:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.green(` ${this.color}`)));
+        break;
+    
+      case CardColor.Incoloro:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.whiteBright(` ${this.color}`)));
+        break;
+
+      case CardColor.Multicolor:
+        console.log(chalk.white(chalk.bold.underline('Color:') + chalk.bold.bgYellowBright(` ${this.color}`)));
+        break;
+
+      default:
+        break;
+    }
+
+    console.log(chalk.white(chalk.bold.underline('Type:') + ` ${this.type}`));
+    console.log(chalk.white(chalk.bold.underline('Rarity:') + ` ${this.rarity}`));
+    console.log(chalk.white(chalk.bold.underline('Text:') + ` ${this.text}`));
+    console.log(chalk.white(chalk.bold.underline('Price:') + ` ${this.price}`));
+    console.log(chalk.white(chalk.bold.underline('Loyalty: ') + `${this.loyalty}`));
+
+    console.log(chalk.grey.bold('-'.repeat(50)));
   }
 
 }

@@ -2,37 +2,38 @@
  * Enumerado que estipula los colores de las cartas
  */
 export enum CardColor {
-  Blanco,
-  Negro,
-  Azul,
-  Rojo,
-  Verde,
-  Incoloro,
-  Multicolor
+  Blanco = 'Blanco',
+  Negro = 'Negro',
+  Azul = 'Azul',
+  Rojo = 'Rojo',
+  Verde = 'Verde',
+  Incoloro = 'Incoloro',
+  Multicolor = 'Multicolor'
 }
 
 /**
  * Enumerado que estipula los tipos de cartas
  */
 export enum CardType {
-  Tierra,
-  Criatura,
-  Encantamiento,
-  Conjuro,
-  Instantáneo,
-  Artefacto,
-  Planeswalker
+  Tierra = 'Tierra',
+  Criatura = 'Criatura',
+  Encantamiento = 'Encantamiento',
+  Conjuro = 'Conjuro',
+  Instantáneo = 'Instantáneo',
+  Artefacto = 'Artefacto',
+  Planeswalker = 'Planeswalker'
 }
 
 /**
  * Enumerado que estipula los tiers de rareza de las cartas
  */
 export enum CardRarity {
-  Común,
-  Infrecuente,
-  Rara,
-  Mítica
+  Común = 'Común',
+  Infrecuente = 'Infrecuente',
+  Rara = 'Rara',
+  Mítica = 'Mítica'
 }
+
 
 export abstract class Card {
   
@@ -94,5 +95,7 @@ export abstract class Card {
   get price() {
     return this.Price;
   }
+
+  abstract print(): void;
 
 }
