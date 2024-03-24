@@ -1,5 +1,5 @@
 import { CardColor, CardType, CardRarity, Card } from "./Card.js";
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 
 /**
  * Interfaz para representar un objeto de tipo CardStats, que se compone de un valor numerico para la fuerza y otro para la resistencia

@@ -64,7 +64,7 @@ describe('CardCollection tests', () => {
     expect(card7.print()).to.not.throw;
     expect(card8.print()).to.not.throw;
     expect(collection2.showCard(1)).to.not.throw;
-    expect(collection2.showCard(6)).to.throw('Card not found!');
+    expect(() => collection2.showCard(6)).to.throw('Card not found!');
   });
 
 });

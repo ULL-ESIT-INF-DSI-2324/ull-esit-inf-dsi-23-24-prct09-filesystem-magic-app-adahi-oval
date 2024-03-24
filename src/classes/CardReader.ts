@@ -1,5 +1,5 @@
 import { Card, CardColor, CardRarity, CardType } from "./Card.js";
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 import { Conjuro, Criatura, Encantamiento, Instantaneo, Planeswalker, Tierra, Artefacto } from "./CardTypes.js";
 import { CardShape } from "./CollectionReader.js";
 

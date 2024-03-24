@@ -1,5 +1,5 @@
 import { Card } from "./Card.js";
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 import { CardCollectionPrinter } from "./CollectionPrinter.js";
 
 export class CardCollection {

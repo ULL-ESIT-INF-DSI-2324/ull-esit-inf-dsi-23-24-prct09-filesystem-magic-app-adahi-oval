@@ -1,7 +1,7 @@
 import { Card } from "./Card.js";
-import * as path from 'path';
-import * as chalk from 'chalk';
-import * as fs from 'fs';
+import path from 'path';
+import chalk from 'chalk';
+import fs from 'fs';
 import { CardStats } from "./CardTypes.js";
 import { CardReader } from "./CardReader.js";
 
